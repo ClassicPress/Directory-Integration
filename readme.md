@@ -1,8 +1,6 @@
 # ClassicPress Directory Integration
 
-[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=TukuToi_tukutoi-cp-directory-integration&metric=bugs)](https://sonarcloud.io/summary/new_code?id=TukuToi_tukutoi-cp-directory-integration) [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=TukuToi_tukutoi-cp-directory-integration&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=TukuToi_tukutoi-cp-directory-integration) [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=TukuToi_tukutoi-cp-directory-integration&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=TukuToi_tukutoi-cp-directory-integration) [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=TukuToi_tukutoi-cp-directory-integration&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=TukuToi_tukutoi-cp-directory-integration) [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=TukuToi_tukutoi-cp-directory-integration&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=TukuToi_tukutoi-cp-directory-integration)
-
-[![slack](https://img.shields.io/badge/Community%20%26%20Support-grey?style=for-the-badge&logo=slack&logoColor=white&label=slack&labelColor=4A154B)](https://tukutoi.slack.com/join/shared_invite/zt-1b1x1844z-_~~4pikNzssevxwnx3BqCA#/shared-invite/email)
+**⚠️ README.md will be updated soon.**
 
 Adds a new screen in a ClassicPress Install where you can browse, install, activate, deactivate, update, delete and paginate Plugins listed on the ClassicPress Directory *or* on GitHub (read more about this additional repository below).
 
