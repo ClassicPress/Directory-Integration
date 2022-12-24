@@ -187,7 +187,7 @@ trait Cp_Plgn_Drctry_Fx {
 	 * @param array  $header Array of headers to send to remote. Empty by default.
 	 * @param string $return The header to return.
 	 */
-	private function get_remote_header( $url, $header = array(), $return ) {
+	private function get_remote_header( $url, $header = array(), $return = null ) {
 
 		$r  = wp_remote_get( $url, $header );
 		$rc = wp_remote_retrieve_response_code( $r );
@@ -232,6 +232,9 @@ trait Cp_Plgn_Drctry_Fx {
 	 */
 	private function vetted_orgs() {
 		$orgs  = json_decode( $this->get_file_contents( __DIR__ . '/partials/github-orgs.txt' ) );
+		if ( empty($orgs) ) {
+			return array();
+		}
 		$_orgs = array();
 		foreach ( $orgs as $org ) {
 			$_orgs[] = $org->slug;
@@ -373,9 +376,8 @@ trait Cp_Plgn_Drctry_Fx {
 		if ( 0 === filesize( $file ) ) {
 			// Get plugins.
 			$git_plugins = $this->get_git_plugins();
-			$cp_plugins  = $this->get_cp_plugins();
 			$cp_plugins2 = $this->get_cp_plugins_v2();
-			$all_plugins = array_merge( $cp_plugins, $git_plugins, $cp_plugins2 );
+			$all_plugins = array_merge( $git_plugins, $cp_plugins2 );
 			// Populate cache.
 			$this->put_file_contents( $this->encode_to_json( $all_plugins ), $this->plugins_cache_file );
 

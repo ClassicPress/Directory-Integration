@@ -31,7 +31,7 @@ class Cp_Plgn_Drctry_Plugin_Fx {
 	/**
 	 * Load Arbitrary Functions.
 	 */
-	use Cp_Plgn_Drctry_Fx, Cp_Plgn_Drctry_GitHub, Cp_Plgn_Drctry_Cp_Api, Cp_Plgn_Drctry_Cp_Api_v2;
+	use Cp_Plgn_Drctry_Fx, Cp_Plgn_Drctry_GitHub, Cp_Plgn_Drctry_Cp_Api_v2;
 
 	/**
 	 * The ID of this plugin.
@@ -59,15 +59,6 @@ class Cp_Plgn_Drctry_Plugin_Fx {
 	 * @var      string    $version    The current version of this plugin.
 	 */
 	private $version;
-
-	/**
-	 * The ClassicPress API URL.
-	 *
-	 * @since    1.3.0
-	 * @access   private
-	 * @var      string    $cp_dir_url    The URL used by ClassicPress to present its API.
-	 */
-	private $cp_dir_url;
 
 	/**
 	 * The ClassicPress API URL V2.
@@ -128,8 +119,7 @@ class Cp_Plgn_Drctry_Plugin_Fx {
 		$this->plugin_prefix      = $plugin_prefix;
 		$this->version            = $version;
 		$this->plugins_cache_file = __DIR__ . '/partials/cp-plugins.txt';
-		$this->cp_dir_url         = 'https://directory.classicpress.net/api/plugins/';
-		$this->cp_dir_url_v2      = '';
+		$this->cp_dir_url_v2      = 'https://staging-directory.classicpress.net/wp-json/wp/v2/plugins';
 		$this->options            = get_option( 'cp_dir_opts_options', array( 'cp_dir_opts_exteranal_org_repos' => $this->vetted_orgs() ) );
 		$this->readme_vars        = array(
 			'README.txt',
